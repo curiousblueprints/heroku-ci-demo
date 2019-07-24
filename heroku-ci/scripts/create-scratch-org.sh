@@ -1,12 +1,10 @@
 #!/bin/bash
 
 # Decrypt server.key. Used for JWT authorization.
-openssl aes-256-cbc -k $ENC_KEY -in $CI_ASSET_DIR/server.key.enc -out 
-$CI_ASSET_DIR/server.key -d
+openssl aes-256-cbc -k $ENC_KEY -in $CI_ASSET_DIR/server.key.enc -out $CI_ASSET_DIR/server.key -d
 
 # Authenticate 
-sfdx force:auth:jwt:grant --clientid $SF_CLIENT_ID --jwtkeyfile 
-$CI_ASSET_DIR/server.key -u $SF_USERNAME 
+sfdx force:auth:jwt:grant --clientid $SF_CLIENT_ID --jwtkeyfile $CI_ASSET_DIR/server.key -u $SF_USERNAME 
 
 
 echo "Creating scratch org..."
