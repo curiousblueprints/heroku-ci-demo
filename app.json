@@ -6,7 +6,7 @@
             ],
             "formation": {
                 "test": {
-                    "size": "hobby",
+                    "size": "standard-1x",
                     "quantity": 1
                 }
             },
