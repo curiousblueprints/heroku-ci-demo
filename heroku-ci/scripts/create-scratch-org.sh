@@ -4,7 +4,7 @@ $CI_ASSET_DIR/server.key -d
 
 # Authenticate 
 sfdx force:auth:jwt:grant --clientid $SF_CLIENT_ID --jwtkeyfile 
-$CI_ASSET_DIR/server.key -u $SF_USERNAME
+$CI_ASSET_DIR/server.key -u $SF_USERNAME 
 
 
 echo "Creating scratch org..."
