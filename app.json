@@ -1,0 +1,19 @@
+{
+    "environments": {
+        "test": {
+            "buildpacks": [
+                {"url": "https://github.com/heroku/salesforce-cli-buildpack"}
+            ],
+            "formation": {
+                "test": {
+                    "size": "free",
+                    "quantity": 12
+                }
+            },
+            "scripts": {
+                "test-setup": "bin/herokuci/test-setup",
+                "test": "bin/herokuci/test"
+            }
+        }
+    }
+}
