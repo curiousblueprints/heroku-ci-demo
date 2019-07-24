@@ -11,8 +11,8 @@
                 }
             },
             "scripts": {
-                "test-setup": "bin/herokuci/test-setup",
-                "test": "bin/herokuci/test"
+                "test-setup": "heroku-ci/scripts/test-setup.sh",
+                "test": "heroku-ci/scripts/test-run.sh"
             }
         }
     }
