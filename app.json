@@ -6,8 +6,8 @@
             ],
             "formation": {
                 "test": {
-                    "size": "free",
-                    "quantity": 12
+                    "size": "hobby",
+                    "quantity": 1
                 }
             },
             "scripts": {
