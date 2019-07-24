@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "------> Setting up test..."
-create-scratch-org.sh || set -e
+bash create-scratch-org.sh || set -e
 echo "------> Done setting up test"
