@@ -8,7 +8,7 @@ sfdx force:auth:jwt:grant --clientid $SF_CLIENT_ID --jwtkeyfile $CI_ASSET_DIR/se
 
 
 echo "Creating scratch org..."
-sfdx force:org:create --definitionfile $CI_ASSET_DIR/project-scratch-def.json
+sfdx force:org:create --definitionfile $CI_ASSET_DIR/project-scratch-def.json --targetdevhubusername $SF_USERNAME
 
 
 # Delete the unencrypted key.
