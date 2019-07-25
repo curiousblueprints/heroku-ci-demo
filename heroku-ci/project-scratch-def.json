@@ -1,0 +1,13 @@
+{
+    "orgName": "ScratchOrg",
+    "edition": "Professional",
+    "features": [],
+    "settings": {
+        "orgPreferenceSettings": {
+            "s1DesktopEnabled": true,
+            "chatterEnabled": true,
+            "analyticsSharingEnable": true,
+            "s1EncryptedStoragePref2": true
+        }
+    }
+}
