@@ -1,7 +1,5 @@
 #!/bin/bash
 #create-scratch-org.sh
-export PATH="vendor/sfdx/cli/bin:$PATH"
-export PATH="vendor/sfdx/jq:$PATH"
 
 # Decrypt server.key. Used for JWT authorization.
 openssl aes-256-cbc -k $ENC_KEY -in $CI_ASSET_DIR/server.key.enc -out $CI_ASSET_DIR/server.key -d
