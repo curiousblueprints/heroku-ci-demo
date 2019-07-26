@@ -3,6 +3,8 @@
 export PATH="$BUILD_DIR/vendor/sfdx/cli/bin:$PATH"
 export PATH="$BUILD_DIR/vendor/sfdx/jq:$PATH"
 
+ls $BUILD_DIR/vendor/sfdx/jq
+
 # Decrypt server.key. Used for JWT authorization.
 openssl aes-256-cbc -k $ENC_KEY -in $CI_ASSET_DIR/server.key.enc -out $CI_ASSET_DIR/server.key -d
 
