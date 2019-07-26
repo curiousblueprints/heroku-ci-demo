@@ -1,4 +1,5 @@
 #!/bin/bash
+#create-scratch-org.sh
 export PATH="$BUILD_DIR/vendor/sfdx/cli/bin:$PATH"
 export PATH="$BUILD_DIR/vendor/sfdx/jq:$PATH"
 
@@ -13,7 +14,7 @@ echo "Creating scratch org..."
 sfdx force:org:create --definitionfile $CI_ASSET_DIR/project-scratch-def.json --targetdevhubusername $SF_USERNAME
 
 # Configure environment variables used in testing.
-ORG_JSON=$(sfdx force:org:display --json)
+ORG_JSON=$(sfdx force:org:display --json -u $SF_USERNAME)
 export SALESFORCE_ACCESS_TOKEN=$(echo $ORG_JSON | jq -r '.result.accessToken')
 export SALESFORCE_INSTANCE_URL=$(echo $ORG_JSON | jq -r '.result.instanceUrl')
 export SALESFORCE_ORG_ID=$(echo $ORG_JSON | jq -r '.result.id')
