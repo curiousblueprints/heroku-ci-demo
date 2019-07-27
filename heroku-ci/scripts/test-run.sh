@@ -4,4 +4,4 @@ echo "-----> running tests..."
 
 source ./$CI_ASSET_DIR/scripts/deploy-metadata.sh
 
-echo "-----> done running tests"
+echo "-----> done running tests" 
