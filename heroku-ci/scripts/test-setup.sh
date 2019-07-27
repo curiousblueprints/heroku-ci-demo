@@ -1,9 +1,8 @@
 #!/bin/bash
 
-echo "------> Setting up test..."
-
-export PATH="vendor/sfdx/cli/bin:$PATH"
-export PATH="vendor/sfdx/jq:$PATH"
-
+echo "-----> Setting up test..."
+bash ./$CI_ASSET_DIR/scripts/export-paths.sh
+bash ./$CI_ASSET_DIR/scripts/decrypt-key.sh
+bash ./$CI_ASSET_DIR/scripts/auth-jwt-grant.sh
 bash ./$CI_ASSET_DIR/scripts/create-scratch-org.sh
-echo "------> Done setting up test"
+echo "-----> Done setting up test"
