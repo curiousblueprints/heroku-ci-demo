@@ -1,8 +1,7 @@
 #!/bin/bash
 
+echo "       creating scratch org..."
 
-echo "Creating scratch org..."
 export SALESFORCE_USERNAME=$(sfdx force:org:create --definitionfile $CONFIG_DIR/project-scratch-def.json --targetdevhubusername $SF_USERNAME --json | jq -r '.result.username')
 
-# Optional: deploy metadata required by tests
-sfdx force:mdapi:deploy -d force-app/main/default --wait 1 -u $SALESFORCE_USERNAME --testlevel RunLocalTests
+echo "       done creating scratch org"
