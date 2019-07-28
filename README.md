@@ -1,6 +1,17 @@
 # heroku-ci-demo
 Demo for Heroku CI
 
+## Environment Vars
+
+- Set in Heroku Config (web page):
+  - *SF_USERNAME*  - The username of the user to deploy or test against
+  - *CLIENT_ID* - The client ID of the connected app the user authenticates with
+  - *ENC_KEY* - The key used to decrypt `server.key` for authentication.
+- Set in Repository (commit changes):
+  - *CI_DIR* - The name of the directory that holds scripts and other items for CI/CD.
+  - *CONFIG_DIR* - The name of the directory that holds configuration info for scratch orgs, env vars, and other items.
+  - *SCRIPT_DIR* - The name of the directory that holds utility scripts, such as for sfdx commands, etc.
+
 # Salesforce App
 
 This guide helps Salesforce developers who are new to Visual Studio Code go from zero to a deployed app using Salesforce Extensions for VS Code and Salesforce CLI.

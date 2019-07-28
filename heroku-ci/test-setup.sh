@@ -3,7 +3,8 @@ set -e
  
 echo "-----> setting up test..."
 
-source ./$CI_ASSET_DIR/scripts/export-paths.sh
+source ./$CI_ASSET_DIR/scripts/export-buildpk-paths.sh
+source ./$CI_ASSET_DIR/scripts/export-project-paths.sh
 source ./$CI_ASSET_DIR/scripts/decrypt-key.sh
 source ./$CI_ASSET_DIR/scripts/auth-jwt-grant.sh
 source ./$CI_ASSET_DIR/scripts/create-scratch-org.sh
