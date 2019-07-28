@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-
+ 
 echo "-----> running tests..."
 
 source ./$CI_ASSET_DIR/scripts/read-scratch-org-name.sh

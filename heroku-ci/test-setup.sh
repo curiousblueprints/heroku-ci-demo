@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-
+ 
 echo "-----> setting up test..."
 
 source ./$CI_ASSET_DIR/scripts/export-paths.sh

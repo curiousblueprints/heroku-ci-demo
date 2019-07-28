@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 source ./$CI_ASSET_DIR/scripts/export-paths.sh
 source ./$CI_ASSET_DIR/scripts/decrypt-key.sh
