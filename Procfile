@@ -1,0 +1,1 @@
+release: bash ./$CI_ASSET_DIR/release.sh
