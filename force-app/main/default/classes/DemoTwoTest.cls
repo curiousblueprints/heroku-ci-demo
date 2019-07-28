@@ -2,7 +2,7 @@
 public without sharing class DemoTwoTest {
     
     @isTest
-    public test() {
+    public void DemoTwoTest() {
         DemoTwo dt = new DemoTwo();
     }
 }
