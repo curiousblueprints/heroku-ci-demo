@@ -7,7 +7,9 @@
     "environments": {
         "test": {
             "buildpacks": [
-                {"url": "https://github.com/heroku/salesforce-cli-buildpack"}
+                {
+                    "url": "https://github.com/heroku/salesforce-cli-buildpack"
+                }
             ],
             "formation": {
                 "test": {
