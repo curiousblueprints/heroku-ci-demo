@@ -3,8 +3,8 @@ set -e
  
 echo "-----> deploying release to $SF_USERNAME..."
 
-source export-buildpk-paths.sh
-source export-project-paths.sh
+source ${0%/*}/scripts/export-buildpk-paths.sh
+source ${0%/*}/scripts/export-project-paths.sh
 source ./$CI_DIR/$SCRIPT_DIR/decrypt-key.sh
 source ./$CI_DIR/$SCRIPT_DIR/auth-jwt-grant.sh
 export SCRATCH_USERNAME="$SF_USERNAME"
