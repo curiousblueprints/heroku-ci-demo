@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
- 
+  
 echo "-----> running tests..."
 
 source ./$CI_DIR/$SCRIPT_DIR/export-buildpk-paths.sh
