@@ -1,1 +1,1 @@
-release: bash ./$CI_ASSET_DIR/release.sh
+release: bash ./$CI_DIR/release.sh
