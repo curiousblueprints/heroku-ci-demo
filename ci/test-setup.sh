@@ -3,12 +3,14 @@ set -e
   
 echo "-----> setting up test..."
 
-source ${0%/*}/scripts/export-buildpk-paths.sh
-source ${0%/*}/scripts/export-project-paths.sh
-source ./$CI_DIR/$SCRIPT_DIR/decrypt-key.sh
-source ./$CI_DIR/$SCRIPT_DIR/auth-jwt-grant.sh
-source ./$CI_DIR/$SCRIPT_DIR/create-scratch-org.sh
-source ./$CI_DIR/$SCRIPT_DIR/remove-decrypted-key.sh
-source ./$CI_DIR/$SCRIPT_DIR/write-scratch-org-name.sh
+current_dir=${0%/*}
+
+source $current_dir/scripts/export-buildpk-paths.sh
+source $current_dir/scripts/export-project-paths.sh
+source $current_dir/scripts/decrypt-key.sh
+source $current_dir/scripts/auth-jwt-grant.sh
+source $current_dir/scripts/create-scratch-org.sh
+source $current_dir/scripts/remove-decrypted-key.sh
+source $current_dir/scripts/write-scratch-org-name.sh
 
 echo "-----> done setting up test"

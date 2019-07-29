@@ -3,9 +3,11 @@ set -e
   
 echo "-----> running tests..."
 
-source ${0%/*}/scripts/export-buildpk-paths.sh
-source ${0%/*}/scripts/export-project-paths.sh
-source ./$CI_DIR/$SCRIPT_DIR/read-scratch-org-name.sh
-source ./$CI_DIR/$SCRIPT_DIR/deploy-metadata.sh
+current_dir=${0%/*}
+
+source $current_dir/scripts/export-buildpk-paths.sh
+source $current_dir/scripts/export-project-paths.sh
+source $current_dir/scripts/read-scratch-org-name.sh
+source $current_dir/scripts/deploy-metadata.sh
 
 echo "-----> done running tests" 

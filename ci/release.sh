@@ -3,12 +3,14 @@ set -e
  
 echo "-----> deploying release to $SF_USERNAME..."
 
-source ${0%/*}/scripts/export-buildpk-paths.sh
-source ${0%/*}/scripts/export-project-paths.sh
-source ./$CI_DIR/$SCRIPT_DIR/decrypt-key.sh
-source ./$CI_DIR/$SCRIPT_DIR/auth-jwt-grant.sh
+current_dir=${0%/*}
+
+source $current_dir/scripts/export-buildpk-paths.sh
+source $current_dir/scripts/export-project-paths.sh
+source $current_dir/scripts/decrypt-key.sh
+source $current_dir/scripts/auth-jwt-grant.sh
 export SCRATCH_USERNAME="$SF_USERNAME"
-source ./$CI_DIR/$SCRIPT_DIR/deploy-metadata.sh
-source ./$CI_DIR/$SCRIPT_DIR/remove-decrypted-key.sh
+source $current_dir/scripts/deploy-metadata.sh
+source $current_dir/scripts/remove-decrypted-key.sh
 
 echo "-----> done deploying release to $SF_USERNAME"
