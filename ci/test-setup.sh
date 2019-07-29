@@ -4,7 +4,7 @@ set -e
 echo "-----> setting up test..."
 
 source ${0%/*}/scripts/export-buildpk-paths.sh
-source ${0%/*}/export-project-paths.sh
+source ${0%/*}/scripts/export-project-paths.sh
 source ./$CI_DIR/$SCRIPT_DIR/decrypt-key.sh
 source ./$CI_DIR/$SCRIPT_DIR/auth-jwt-grant.sh
 source ./$CI_DIR/$SCRIPT_DIR/create-scratch-org.sh
