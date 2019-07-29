@@ -4,6 +4,11 @@
             "url": "https://github.com/heroku/salesforce-cli-buildpack"
         }
     ],
+    "env": {
+        "CI_DIR": "ci",
+        "CONFIG_DIR": "config",
+        "SCRIPT_DIR": "scripts"
+    },
     "environments": {
         "test": {
             "buildpacks": [
@@ -18,8 +23,8 @@
                 }
             },
             "scripts": {
-                "test-setup": "ci/test-setup.sh",
-                "test": "ci/test-run.sh"
+                "test-setup": "$CI_DIR/test-setup.sh",
+                "test": "$CI_DIR/test-run.sh"
             }
         }
     }
