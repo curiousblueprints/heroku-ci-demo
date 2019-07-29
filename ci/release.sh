@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
- 
+
 echo "-----> deploying release to $SF_USERNAME..."
 
 source ./$SCRIPT_DIR/export-buildpk-paths.sh
